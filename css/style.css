@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+
+:root {
+    --background: black;
+    --container: #ffffff33;
+    --items: #e9e0d1;
+
+
+    /*
+    #311d39
+    --background: black;
+    --container: #c2c2d423;
+    --items: whitesmoke;
+    */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: var(--background);
+}
+
+.container {
+    width: 60%;
+    height: 85%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--container);
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.742);
+    padding: 10px;
+    backdrop-filter: blur(50px);
+}
+
+.container__perfil{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.container__titulo {
+    font-size: 35px;
+    color: white;
+    text-shadow: 0px 0px 10px black;
+}
+
+.container__descricao {
+    font-size: 18px;
+    color: rgb(235, 238, 243);
+}
+
+.container__perfil--imagem {
+    width: 150px;
+    border-radius: 50%;
+    border: 2px solid whitesmoke;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.676);
+    margin: 8px 0;
+}
+
+.container__informacoes {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container__item {
+    width: 90%;
+    height: 70px;
+    background-color: var(--items);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin: 7px 0;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.292);
+}
+
+.container__link {
+    text-decoration: none;
+    font-size: 20px;
+    width: 100%;
+    height: 100%;
+    color: black;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.container__imagem {
+    display: flex;
+    width: 250px;
+    justify-content: start;
+    align-items: center;
+}
+
+.container__item--imagem {
+    width: 50px;
+    margin-left: 20%;
+    margin-right: 10px;
+}
+
+.container__link:hover {
+    background-color: rgba(0, 0, 0, 0.573);
+    box-shadow: 0px 0px 2px rgba(255, 255, 255, 0.864);
+}
+
+@media (max-width: 1400px) {
+
+    .container__titulo {
+        font-size: 30px;
+    }
+
+    .container__item {
+        height: 60px;
+    }
+    
+
+    .container__item--imagem {
+        width: 40px;
+    }
+}
+
+@media (max-width:630px) {
+
+    .container {
+        height: 80%;
+    }
+
+    .container__titulo {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .container__descricao {
+        margin-top: 6px;
+        font-size: 14px;
+    }
+
+    .container__item {
+        height: 40px;
+    }
+    
+    .container__item--imagem {
+        width: 30px;
+    }
+
+    .container_item--text {
+        font-size: 15px;
+    }
+
+    .container__perfil--imagem {
+        width: 110px;
+    }
+}
